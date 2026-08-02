@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!-- Thẻ Meta Viewport quan trọng quyết định tính Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Responsive CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hop-noi-dung">
+        <h2>Xin chào!</h2>
+        <p>Thử co giãn chiều rộng trình duyệt của bạn để thấy màu nền và kích thước của chiếc hộp này thay đổi.</p>
+    </div>
+
+</body>
+</html>
