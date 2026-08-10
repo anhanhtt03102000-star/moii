@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Án Web Đáp Ứng</title>
+    <style>
+        /* ==========================================
+           1. CẤU HÌNH CƠ BẢN (BASE STYLES)
+           ========================================== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Khung chứa các phần tử */
+        .grid-container {
+            /* 4a. Sử dụng lưới 1 cột cho Mobile-first */
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px; /* Khoảng cách 10px giữa hàng và cột */
+        }
+
+        /* Thẻ figure chứa hình ảnh và chú thích */
+        figure {
+            margin: 0;
+            padding: 15px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* ==========================================
+           5. CHẾ ĐỘ XEM MÁY TÍNH BẢNG (TABLET - 772px)
+           ========================================== */
+        @media (min-width: 772px) {
+            /* 5a. Sử dụng lưới 2 cột */
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* 5b. Đặt bán kính đường viền trên các hình để tạo hình tròn */
+            .grid-container figure img {
+                border-radius: 50%;
+                aspect-ratio: 1 / 1; /* Đảm bảo ảnh là hình vuông để bo tròn đẹp */
+            }
+
+            /* 5c. Đặt con số/phần tử cuối cùng để chiếm cả 2 cột */
+            .grid-container > *:last-child {
+                grid-column: span 2;
+            }
+        }
+
+        /* ==========================================
+           6. CHẾ ĐỘ XEM MÀN HÌNH LỚN (DESKTOP - 992px)
+           ========================================== */
+        @media (min-width: 992px) {
+            /* Reset lại ô cuối cùng để không bị đè CSS từ tablet */
+            .grid-container > *:last-child {
+                grid-column: auto;
+            }
+
+            /* 6a. Đặt mỗi con số/phần tử thứ ba để chiếm cả hai cột */
+            .grid-container > *:nth-child(3n) {
+                grid-column: span 2;
+            }
+
+            /* 6b. Xóa bán kính đường viền khỏi tất cả các hình */
+            .grid-container figure img {
+                border-radius: 0;
+                aspect-ratio: auto;
+                /* 6b.i. Đảm bảo không sử dụng chiều rộng tối đa (max-width) */
+                max-width: none;
+            }
+        }
+
+        /* ==========================================
+           7. GIẢM CHUYỂN ĐỘNG (PREFERS-REDUCED-MOTION)
+           ========================================== */
+        @media (prefers-reduced-motion: reduce) {
+            /* 7a. Xóa hành vi cuộn */
+            html {
+                scroll-behavior: auto !important;
+            }
+
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* ==========================================
+           8. TRUY VẤN MÀU TỐI (PREFERS-COLOR-SCHEME: DARK)
+           ========================================== */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+            }
+
+            /* 8a. Thay đổi màu nền của các hình thành màu tối */
+            .grid-container figure {
+                background-color: #1e1e1e;
+                /* 8c. Thay đổi màu viền của các hình thành màu đen */
+                border: 1px solid #000000;
+            }
+
+            /* 8b. Thay đổi màu phông chữ thành màu nhạt hơn (màu vàng) */
+            .grid-container figure,
+            .grid-container figure p,
+            .grid-container figure figcaption,
+            h1 {
+                color: #ffff00;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bộ Sưu Tập Thiên Nhiên & Kiến Trúc</h1>
+
+    <main class="grid-container">
+        <!-- Mục 1: Đã thay thế ảnh và có thuộc tính alt -->
+        <!-- Mục 2: Đã thay thế toàn bộ nội dung trong thẻ đoạn văn <p> -->
+        
+        <!-- Hình 1 -->
+        <figure>
+            <img src="https://picsum.photos/id/1015/400/300" alt="Dòng sông chảy qua thung lũng xanh mướt">
+            <figcaption>
+                <p>Khung cảnh thiên nhiên hùng vĩ với dòng sông uốn lượn qua các dãy núi trùng điệp vào buổi sáng sớm.</p>
+            </figcaption>
+        </figure>
+
+        <!-- Hình 2 -->
+        <figure>
+            <img src="https://picsum.photos/id/1018/400/300" alt="Dãy núi đá cao sừng sững dưới bầu trời xanh">
+            <figcaption>
+                <p>Những đỉnh núi tuyết phủ trắng xóa đứng sừng sững giữa bầu trời xanh trong vắt, tạo nên vẻ đẹp hoang sơ.</p>
+            </figcaption>
+        </figure>
+
+        <!-- Hình 3 (Ở màn hình lớn sẽ chiếm 2 cột) -->
+        <figure>
+            <img src="https://picsum.photos/id/1019/400/300" alt="Cây cầu hiện đại bắc qua dòng hải cảng rộng lớn">
+            <figcaption>
+                <p>Công trình kiến trúc hiện đại nối liền hai bờ thành phố, rực rỡ đèn đường mỗi khi chiều tà buông xuống.</p>
+            </figcaption>
+        </figure>
+
+        <!-- Hình 4 -->
+        <figure>
+            <img src="https://picsum.photos/id/1025/400/300" alt="Chú chó nhỏ đáng yêu ngồi trên thảm cỏ xanh">
+            <figcaption>
+                <p>Hình ảnh động vật ngộ nghĩnh đang tận hưởng không khí trong lành của công viên vào mùa xuân.</p>
+            </figcaption>
+        </figure>
+
+        <!-- Hình 5 -->
+        <figure>
+            <img src="https://picsum.photos/id/1039/400/300" alt="Thành phố lên đèn về đêm rực rỡ màu sắc">
+            <figcaption>
+                <p>Toàn cảnh đô thị sôi động về đêm với hàng triệu ánh đèn lung linh từ các tòa nhà cao tầng.</p>
+            </figcaption>
+        </figure>
+
+        <!-- Hình 6 (Cuối cùng ở chế độ Tablet sẽ chiếm 2 cột / Chế độ Desktop chiếm 2 cột vì là hình thứ 6) -->
+        <figure>
+            <img src="https://picsum.photos/id/1043/400/300" alt="Rừng cây mùa thu ngập tràn lá vàng rơi">
+            <figcaption>
+                <p>Con đường nhỏ xuyên qua khu rừng mùa thu đầy lãng mạn với thảm lá vàng rực rỡ dưới ánh nắng.</p>
+            </figcaption>
+        </figure>
+    </main>
+
+</body>
+</html>
