@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #2563eb;
+  --bg-light: #f8fafc;
+  --text-dark: #0f172a;
+}
+
+/* Responsive Grid layout for products */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
