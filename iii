@@ -1,0 +1,42 @@
++-----------------------------------------------------------------+
+| [LOGO]       [Thanh tìm kiếm (Search)]        [Giỏ hàng] [User] |  <- Header
++-----------------------------------------------------------------+
+| [Trang chủ]   [Sản phẩm]   [Khuyến mãi]   [Liên hệ]            |  <- Navbar
++-----------------------------------------------------------------+
+|                                                                 |
+| [ BANNER PROMOTION / HERO SECTION (Khuyến mãi nổi bật) ]        |  <- Hero Banner
+|                                                                 |
++-----------------------------------------------------------------+
+| [BỘ LỌC] | [ SẢN PHẨM 1 ]  [ SẢN PHẨM 2 ]  [ SẢN PHẨM 3 ]      |
+| Danh mục |   - Hình ảnh       - Hình ảnh       - Hình ảnh       |  <- Main
+| Giá cả   |   - Tên & Giá      - Tên & Giá      - Tên & Giá      |     Content
+| Thương   |   - Nút Mua        - Nút Mua        - Nút Mua        |     (Giao diện
+| hiệu     | [ SẢN PHẨM 4 ]  [ SẢN PHẨM 5 ]  [ SẢN PHẨM 6 ]      |      lưới 3 cột)
++-----------------------------------------------------------------+
+| [Thông tin liên hệ]      [Chính sách đổi trả]      [Mạng xã hội]|  <- Footer
++-----------------------------------------------------------------+
+
+
++----------------------------------+
+| [≡ Menu]    [LOGO]    [Giỏ hàng] |  <- Header thu gọn
++----------------------------------+
+| [🔍 Thanh tìm kiếm sản phẩm    ] |  <- Search bar riêng
++----------------------------------+
+|                                  |
+| [ BANNER PROMOTION / HERO ]      |  <- Hero Banner vừa màn hình
+|                                  |
++----------------------------------+
+| [⚡ Bộ lọc & Sắp xếp (Button)]   |  <- Bộ lọc thu gọn thành nút
++----------------------------------+
+| [ SẢN PHẨM 1 ]                   |
+|   - Hình ảnh                     |
+|   - Tên & Giá                    |
+|   - Nút Mua                      |
++----------------------------------+
+| [ SẢN PHẨM 2 ]                   |  <- Main Content
+|   - Hình ảnh                     |     (Bố cục 1 cột dọc)
+|   - Tên & Giá                    |
+|   - Nút Mua                      |
++----------------------------------+
+| [Thông tin liên hệ & Chân trang] |  <- Footer thu gọn
++----------------------------------+
