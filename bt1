@@ -1,38 +1,49 @@
-# BẰNG CHỨNG TUÂN THỦ TIÊU CHUẨN
+# BÁO CÁO DỰ ÁN TRANG WEB (PROJECT SUBMISSION REPORT)
 
-### 1. Xác thực W3C (W3 Validator)
-Trang web không chứa lỗi HTML/CSS.
-*(Chèn ảnh chụp màn hình kết quả kiểm tra thành công từ validator.w3.org tại đây)*
+## I. MÔ TẢ DỰ ÁN & LIÊN KẾT (PROJECT OVERVIEW & LINK)
 
-### 2. Thiết kế đáp ứng (Responsive Design)
-Giao diện tự động tối ưu hiển thị trên Mobile, Tablet và Desktop.
-*(Chèn ảnh chụp màn hình kiểm tra qua Chrome DevTools ở các kích thước màn hình khác nhau tại đây)*
+1. **Mô tả dự án:**
+   Trang web được thiết kế để giới thiệu dự án cá nhân / danh mục đầu tư (Portfolio). Giao diện hướng tới sự hiện đại, tối ưu hóa trải nghiệm người dùng, cấu trúc mã nguồn chuẩn SEO và tương thích hoàn hảo trên nhiều thiết bị.
 
-### 3. Cấu trúc & Định kiểu CSS tốt
-Mã nguồn CSS được tổ chức mạch lạc, có phân chia module rõ ràng (màu sắc, typography, layout, animation).
-*(Chèn ảnh chụp màn hình các tệp .css chính hoặc đính kèm code CSS tại đây)*
+2. **Liên kết trang web (Live Demo Link):** 
+   `https://your-website-domain.com` *(Thay bằng đường dẫn trang web đã lưu trữ của bạn, ví dụ: Netlify, Vercel, GitHub Pages)*
 
 ---
 
-# 4 TÍNH NĂNG BỔ SUNG (ADDITIONAL FEATURES)
+## II. BẰNG CHỨNG TUÂN THỦ TIÊU CHUẨN (COMPLIANCE EVIDENCE)
 
-### Tính năng 1 - Dark/Light Mode
-Chế độ chuyển đổi giao diện sáng/tối linh hoạt bằng JavaScript.
+### 1. Tuân thủ trình xác thực W3C (W3C Validation)
+* **Trạng thái:** Mã nguồn HTML5 và CSS3 đã được kiểm tra thành công trên `validator.w3.org`, đạt chuẩn không chứa lỗi cú pháp (0 errors, 0 warnings).
+* **Bằng chứng:** 
+  *(Chèn ảnh chụp màn hình kết quả "Document checking completed. No errors or warnings to show." từ W3C Validator tại đây)*
 
+### 2. Thiết kế đáp ứng (Responsive Design)
+* **Trạng thái:** Giao diện tự động co giãn linh hoạt, đảm bảo trải nghiệm hiển thị tối ưu trên các dòng máy Mobile, Tablet và Desktop.
+* **Bằng chứng:** 
+  *(Chèn ảnh chụp màn hình kiểm tra qua Chrome DevTools ở các kích thước 375px - Mobile, 768px - Tablet, 1440px - Desktop tại đây)*
+
+### 3. Cấu trúc & Định kiểu CSS tốt (Well-styled CSS)
+* **Trạng thái:** Mã CSS được tổ chức có hệ thống, phân chia rõ ràng theo từng thành phần (Reset, Variables, Layout, Components, Animations). Sử dụng biến CSS (`:root`) giúp dễ dàng bảo trì.
+* **Bằng chứng mã nguồn CSS:**
 ```css
-/* CSS Variables & Dark Mode Class */
+/* Biến hệ thống (CSS Variables) */
 :root {
+  --primary-color: #2563eb;
   --bg-color: #ffffff;
-  --text-color: #111111;
+  --text-color: #1f2937;
+  --font-main: 'Inter', sans-serif;
 }
 
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ffffff;
+/* Reset CSS & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
 }
