@@ -1,3 +1,4 @@
+# PROJECT SUBMISSION REPORT
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,9 @@
             --border-color: #30363d;
             --subtext-color: #8b949e;
             --code-bg: #21262d;
+            --keyword-color: #ff7b72;
+            --func-color: #d2a8ff;
+            --string-color: #a5d6ff;
         }
 
         body {
@@ -52,6 +56,8 @@
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
         }
 
         hr {
@@ -87,12 +93,46 @@
             font-size: 0.9em;
         }
 
+        pre {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            overflow-x: auto;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: var(--text-color);
+        }
+
         .annotation {
             color: var(--subtext-color);
             font-style: italic;
             display: block;
             margin-top: 4px;
         }
+
+        .feature-block {
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            color: var(--heading-color);
+            margin-bottom: 4px;
+        }
+
+        .feature-desc {
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        /* Syntax Highlighting */
+        .kw { color: var(--keyword-color); }
+        .fn { color: var(--func-color); }
+        .str { color: var(--string-color); }
     </style>
 </head>
 <body>
@@ -108,6 +148,10 @@
             <li>
                 <strong>Website Link:</strong> <code>https://your-website-domain.com</code>
                 <span class="annotation">*(Replace with your actual hosted link on Vercel, Netlify, or GitHub Pages)*</span>
+            </li>
+            <li>
+                <strong>Video Presentation / Walkthrough:</strong> <code>https://youtube.com/your-video-link</code>
+                <span class="annotation">*(Attach a brief video overview or detailed text description here)*</span>
             </li>
         </ul>
 
@@ -128,6 +172,54 @@
                 <span class="annotation">*(Attach screenshot of your CSS files here)*</span>
             </li>
         </ul>
+
+        <hr>
+
+        <h2>3. Extra Features (4 Additional Features)</h2>
+
+        <div class="feature-block">
+            <div class="feature-title">• Feature 1: Dark / Light Mode Toggle</div>
+            <div class="feature-desc"><em>Description:</em> Allows users to switch themes dynamically using JavaScript and CSS variables.</div>
+            <pre><code><span class="kw">const</span> toggleBtn = document.<span class="fn">querySelector</span>(<span class="str">'#theme-toggle'</span>);
+toggleBtn.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, () =&gt; {
+  document.body.classList.<span class="fn">toggle</span>(<span class="str">'dark-theme'</span>);
+});</code></pre>
+        </div>
+
+        <div class="feature-block">
+            <div class="feature-title">• Feature 2: Interactive Contact Form Validation</div>
+            <div class="feature-desc"><em>Description:</em> Real-time client-side validation ensuring valid email formatting and non-empty input fields.</div>
+            <pre><code><span class="kw">function</span> <span class="fn">validateEmail</span>(email) {
+  <span class="kw">const</span> re = <span class="str">/^[^\s@]+@[^\s@]+\.[^\s@]+$/</span>;
+  <span class="kw">return</span> re.<span class="fn">test</span>(<span class="fn">String</span>(email).<span class="fn">toLowerCase</span>());
+}</code></pre>
+        </div>
+
+        <div class="feature-block">
+            <div class="feature-title">• Feature 3: Smooth Scroll & Sticky Navigation Bar</div>
+            <div class="feature-desc"><em>Description:</em> Implements CSS <code>scroll-behavior: smooth</code> and JavaScript-based active link highlighting on scroll.</div>
+            <pre><code>html {
+  <span class="kw">scroll-behavior</span>: smooth;
+}
+<span class="fn">.navbar</span> {
+  <span class="kw">position</span>: sticky;
+  <span class="kw">top</span>: 0;
+  <span class="kw">z-index</span>: 1000;
+}</code></pre>
+        </div>
+
+        <div class="feature-block">
+            <div class="feature-title">• Feature 4: Dynamic Filterable Portfolio Gallery</div>
+            <div class="feature-desc"><em>Description:</em> Filters project cards based on category tags using CSS Grid and JS data-attributes.</div>
+            <pre><code><span class="kw">function</span> <span class="fn">filterProjects</span>(category) {
+  <span class="kw">const</span> cards = document.<span class="fn">querySelectorAll</span>(<span class="str">'.project-card'</span>);
+  cards.<span class="fn">forEach</span>(card =&gt; {
+    <span class="kw">const</span> isMatch = category === <span class="str">'all'</span> || card.dataset.category === category;
+    card.style.display = isMatch ? <span class="str">'block'</span> : <span class="str">'none'</span>;
+  });
+}</code></pre>
+        </div>
+
     </div>
 
 </body>
