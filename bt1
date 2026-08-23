@@ -1,30 +1,3 @@
-# BÁO CÁO DỰ ÁN TRANG WEB (PROJECT SUBMISSION REPORT)
-
-## I. MÔ TẢ DỰ ÁN & LIÊN KẾT (PROJECT OVERVIEW & LINK)
-
-1. **Mô tả dự án:**
-   Trang web được thiết kế để giới thiệu dự án cá nhân / danh mục đầu tư (Portfolio). Giao diện hướng tới sự hiện đại, tối ưu hóa trải nghiệm người dùng, cấu trúc mã nguồn chuẩn SEO và tương thích hoàn hảo trên nhiều thiết bị.
-
-2. **Liên kết trang web (Live Demo Link):** 
-   `https://your-website-domain.com` *(Thay bằng đường dẫn trang web đã lưu trữ của bạn, ví dụ: Netlify, Vercel, GitHub Pages)*
-
----
-
-## II. BẰNG CHỨNG TUÂN THỦ TIÊU CHUẨN (COMPLIANCE EVIDENCE)
-
-### 1. Tuân thủ trình xác thực W3C (W3C Validation)
-* **Trạng thái:** Mã nguồn HTML5 và CSS3 đã được kiểm tra thành công trên `validator.w3.org`, đạt chuẩn không chứa lỗi cú pháp (0 errors, 0 warnings).
-* **Bằng chứng:** 
-  *(Chèn ảnh chụp màn hình kết quả "Document checking completed. No errors or warnings to show." từ W3C Validator tại đây)*
-
-### 2. Thiết kế đáp ứng (Responsive Design)
-* **Trạng thái:** Giao diện tự động co giãn linh hoạt, đảm bảo trải nghiệm hiển thị tối ưu trên các dòng máy Mobile, Tablet và Desktop.
-* **Bằng chứng:** 
-  *(Chèn ảnh chụp màn hình kiểm tra qua Chrome DevTools ở các kích thước 375px - Mobile, 768px - Tablet, 1440px - Desktop tại đây)*
-
-### 3. Cấu trúc & Định kiểu CSS tốt (Well-styled CSS)
-* **Trạng thái:** Mã CSS được tổ chức có hệ thống, phân chia rõ ràng theo từng thành phần (Reset, Variables, Layout, Components, Animations). Sử dụng biến CSS (`:root`) giúp dễ dàng bảo trì.
-* **Bằng chứng mã nguồn CSS:**
 ```css
 /* Biến hệ thống (CSS Variables) */
 :root {
@@ -46,4 +19,10 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+}
+
+css 
+body.dark-mode {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
 }
