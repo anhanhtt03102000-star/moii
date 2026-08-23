@@ -142,11 +142,11 @@
         <h2>1. Project Overview & Live Link</h2>
         <ul>
             <li>
-                <strong>Project Description:</strong> Modern portfolio/landing page built with custom extensions over a base structure, focusing on UX, responsiveness, and clean web standards.
+                <strong>Project Description:</strong> Modern portfolio/landing page built with custom extensions, focusing on UX, responsive layouts, and clean web architecture.
             </li>
             <li>
                 <strong>Website Link:</strong> <code>https://your-website-domain.com</code>
-                <span class="annotation">*(Replace with your actual hosted link on Vercel, Netlify, or GitHub Pages)*</span>
+                <span class="annotation">*(Replace with your hosted link on Vercel, Netlify, or GitHub Pages)*</span>
             </li>
             <li>
                 <strong>Video Presentation / Walkthrough:</strong> <code>https://youtube.com/your-video-link</code>
@@ -174,19 +174,7 @@
 
         <hr>
 
-        <h2>3. Template Modifications & Accessibility</h2>
-        <ul>
-            <li>
-                <strong>Custom Modifications Made:</strong> Replaced default styling with a custom dark/light color palette using CSS variables, restructured navigation for sticky positioning, and integrated dynamic JavaScript modules.
-            </li>
-            <li>
-                <strong>Accessibility & Fixes:</strong> Enhanced color contrast ratios for high visibility, added semantic HTML5 elements (<code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>), included explicit <code>alt</code> attributes on all images, and added keyboard navigation support.
-            </li>
-        </ul>
-
-        <hr>
-
-        <h2>4. Extra Features (4 Additional Features)</h2>
+        <h2>3. Extra Features (4 Additional Features)</h2>
 
         <div class="feature-block">
             <div class="feature-title">• Feature 1: Dark / Light Mode Toggle</div>
