@@ -1,4 +1,3 @@
-# PROJECT SUBMISSION REPORT
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,7 +142,7 @@
         <h2>1. Project Overview & Live Link</h2>
         <ul>
             <li>
-                <strong>Project Description:</strong> This website is designed as a modern portfolio/landing page focused on user experience, responsive layout, and clean code architecture.
+                <strong>Project Description:</strong> Modern portfolio/landing page built with custom extensions over a base structure, focusing on UX, responsiveness, and clean web standards.
             </li>
             <li>
                 <strong>Website Link:</strong> <code>https://your-website-domain.com</code>
@@ -151,7 +150,7 @@
             </li>
             <li>
                 <strong>Video Presentation / Walkthrough:</strong> <code>https://youtube.com/your-video-link</code>
-                <span class="annotation">*(Attach a brief video overview or detailed text description here)*</span>
+                <span class="annotation">*(Attach video demo or walkthrough link here)*</span>
             </li>
         </ul>
 
@@ -160,26 +159,38 @@
         <h2>2. Compliance Evidence</h2>
         <ul>
             <li>
-                <strong>W3C Validation:</strong> The HTML5 and CSS3 code passed verification on <code>validator.w3.org</code> with zero errors and zero warnings.
+                <strong>W3C Validation:</strong> HTML5 & CSS3 verified on <code>validator.w3.org</code> with 0 errors and 0 warnings.
                 <span class="annotation">*(Attach W3C Validator screenshot here)*</span>
             </li>
             <li>
-                <strong>Responsive Design:</strong> The layout automatically adapts across Mobile (375px), Tablet (768px), and Desktop (1200px+) viewports.
+                <strong>Responsive Design:</strong> Fully responsive across Mobile (375px), Tablet (768px), and Desktop (1200px+).
                 <span class="annotation">*(Attach Chrome DevTools responsive preview screenshot here)*</span>
             </li>
             <li>
-                <strong>Well-Styled CSS:</strong> CSS code is organized modularly using CSS Variables (<code>:root</code>), clear naming conventions, and clean structure.
+                <strong>Well-Styled CSS:</strong> Organized using CSS Variables (<code>:root</code>), CSS Grid, Flexbox, and modular structure.
                 <span class="annotation">*(Attach screenshot of your CSS files here)*</span>
             </li>
         </ul>
 
         <hr>
 
-        <h2>3. Extra Features (4 Additional Features)</h2>
+        <h2>3. Template Modifications & Accessibility</h2>
+        <ul>
+            <li>
+                <strong>Custom Modifications Made:</strong> Replaced default styling with a custom dark/light color palette using CSS variables, restructured navigation for sticky positioning, and integrated dynamic JavaScript modules.
+            </li>
+            <li>
+                <strong>Accessibility & Fixes:</strong> Enhanced color contrast ratios for high visibility, added semantic HTML5 elements (<code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>), included explicit <code>alt</code> attributes on all images, and added keyboard navigation support.
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>4. Extra Features (4 Additional Features)</h2>
 
         <div class="feature-block">
             <div class="feature-title">• Feature 1: Dark / Light Mode Toggle</div>
-            <div class="feature-desc"><em>Description:</em> Allows users to switch themes dynamically using JavaScript and CSS variables.</div>
+            <div class="feature-desc"><em>Description:</em> Switches visual themes dynamically using JavaScript state and CSS custom properties.</div>
             <pre><code><span class="kw">const</span> toggleBtn = document.<span class="fn">querySelector</span>(<span class="str">'#theme-toggle'</span>);
 toggleBtn.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, () =&gt; {
   document.body.classList.<span class="fn">toggle</span>(<span class="str">'dark-theme'</span>);
@@ -188,7 +199,7 @@ toggleBtn.<span class="fn">addEventListener</span>(<span class="str">'click'</sp
 
         <div class="feature-block">
             <div class="feature-title">• Feature 2: Interactive Contact Form Validation</div>
-            <div class="feature-desc"><em>Description:</em> Real-time client-side validation ensuring valid email formatting and non-empty input fields.</div>
+            <div class="feature-desc"><em>Description:</em> Real-time client-side input validation for regex email verification and required field prompts.</div>
             <pre><code><span class="kw">function</span> <span class="fn">validateEmail</span>(email) {
   <span class="kw">const</span> re = <span class="str">/^[^\s@]+@[^\s@]+\.[^\s@]+$/</span>;
   <span class="kw">return</span> re.<span class="fn">test</span>(<span class="fn">String</span>(email).<span class="fn">toLowerCase</span>());
@@ -197,7 +208,7 @@ toggleBtn.<span class="fn">addEventListener</span>(<span class="str">'click'</sp
 
         <div class="feature-block">
             <div class="feature-title">• Feature 3: Smooth Scroll & Sticky Navigation Bar</div>
-            <div class="feature-desc"><em>Description:</em> Implements CSS <code>scroll-behavior: smooth</code> and JavaScript-based active link highlighting on scroll.</div>
+            <div class="feature-desc"><em>Description:</em> Implements smooth section transitions via CSS and sticky position header.</div>
             <pre><code>html {
   <span class="kw">scroll-behavior</span>: smooth;
 }
@@ -210,7 +221,7 @@ toggleBtn.<span class="fn">addEventListener</span>(<span class="str">'click'</sp
 
         <div class="feature-block">
             <div class="feature-title">• Feature 4: Dynamic Filterable Portfolio Gallery</div>
-            <div class="feature-desc"><em>Description:</em> Filters project cards based on category tags using CSS Grid and JS data-attributes.</div>
+            <div class="feature-desc"><em>Description:</em> Categorizes and displays projects dynamically using JS filter logic on dataset attributes.</div>
             <pre><code><span class="kw">function</span> <span class="fn">filterProjects</span>(category) {
   <span class="kw">const</span> cards = document.<span class="fn">querySelectorAll</span>(<span class="str">'.project-card'</span>);
   cards.<span class="fn">forEach</span>(card =&gt; {
