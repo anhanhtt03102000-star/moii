@@ -1,38 +1,53 @@
-# BẰNG CHỨNG TUÂN THỦ TIÊU CHUẨN
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Án HTML Cuối Kỳ</title>
+</head>
+<body>
 
-### 1. Xác thực W3C (W3 Validator)
-Trang web không chứa lỗi HTML/CSS.
-*(Chèn ảnh chụp màn hình kết quả kiểm tra thành công từ validator.w3.org tại đây)*
+    <header>
+        <h1>Khám Phá Thiên Nhiên Rực Rỡ</h1>
+    </header>
 
-### 2. Thiết kế đáp ứng (Responsive Design)
-Giao diện tự động tối ưu hiển thị trên Mobile, Tablet và Desktop.
-*(Chèn ảnh chụp màn hình kiểm tra qua Chrome DevTools ở các kích thước màn hình khác nhau tại đây)*
+    <main>
+        <section>
+            <h2>Giới Thiệu</h2>
+            <p>Đây là trang web giới thiệu về cảnh quan thiên nhiên đẹp mắt và danh sách các hoạt động ngoài trời hấp dẫn.</p>
+        </section>
 
-### 3. Cấu trúc & Định kiểu CSS tốt
-Mã nguồn CSS được tổ chức mạch lạc, có phân chia module rõ ràng (màu sắc, typography, layout, animation).
-*(Chèn ảnh chụp màn hình các tệp .css chính hoặc đính kèm code CSS tại đây)*
+        <section>
+            <h2>Danh Sách Hoạt Động Ưu Thích</h2>
+            <ul>
+                <li>Đi bộ đường dài (Hiking)</li>
+                <li>Cắm trại qua đêm (Camping)</li>
+                <li>Chụp ảnh thiên nhiên (Landscape Photography)</li>
+            </ul>
+        </section>
 
----
+        <section>
+            <h2>Thư Viện Hình Ảnh</h2>
+            <figure>
+                <img src="https://picsum.photos/id/10/400/250" alt="Cảnh rừng núi thơ mộng buổi sáng">
+                <figcaption>Hình 1: Cảnh rừng núi</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="https://picsum.photos/id/29/400/250" alt="Con đường băng qua ngọn núi xanh">
+                <figcaption>Hình 2: Con đường núi</figcaption>
+            </figure>
 
-# 4 TÍNH NĂNG BỔ SUNG (ADDITIONAL FEATURES)
+            <figure>
+                <img src="https://picsum.photos/id/28/400/250" alt="Bờ biển ngập tràn ánh nắng chiều">
+                <figcaption>Hình 3: Bờ biển hoàng hôn</figcaption>
+            </figure>
+        </section>
+    </main>
 
-### Tính năng 1 - Dark/Light Mode
-Chế độ chuyển đổi giao diện sáng/tối linh hoạt bằng JavaScript.
+    <footer>
+        <p>&copy; 2026 Bản quyền thuộc về Dự án HTML Cuối Kỳ.</p>
+    </footer>
 
-```css
-/* CSS Variables & Dark Mode Class */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-}
-
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ffffff;
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
-}
+</body>
+</html>
